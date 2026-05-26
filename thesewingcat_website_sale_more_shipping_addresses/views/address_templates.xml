@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="website_sale_delivery_address_button_for_all_customers" inherit_id="website_sale.delivery_address_list">
+        <xpath expr="//a[hasclass('o_address_card_add_new')]" position="attributes">
+            <attribute name="t-if"/>
+        </xpath>
+    </template>
+    <template id="website_sale_remove_billing_address_button" inherit_id="website_sale.billing_address_list">
+        <xpath expr="//a[contains(@t-attf-class, 'o_add_billing_address_btn')]" position="replace"/>
+    </template>
+    <template id="portal_remove_billing_address_button" inherit_id="portal.my_addresses">
+        <xpath expr="//a[contains(@t-attf-class, 'o_add_billing_address_btn')]" position="replace"/>
+    </template>
+</odoo>
