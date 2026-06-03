@@ -14,7 +14,7 @@
         <xpath expr="//label[@for='o_vat']" position="attributes">
             <attribute name="t-attf-class">col-form-label fw-normal#{'' if invoice_to_company else ' label-optional'}</attribute>
         </xpath>
-        <xpath expr="//div[@id='div_street']" position="before">
+        <xpath expr="//div[@id='div_phone']" position="after">
             <div
                 t-if="display_b2b_fields and is_used_as_billing"
                 id="div_invoice_to_company"
