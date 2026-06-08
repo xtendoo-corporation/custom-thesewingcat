@@ -35,5 +35,27 @@
         </xpath>
     </template>
 
-</odoo>
+    <!-- Hide use_delivery_as_billing checkbox in billing address list (checkout) -->
+<!--    <template id="billing_address_list_invoice_to_company" inherit_id="website_sale.billing_address_list">-->
+<!--&lt;!&ndash;        <xpath expr="//label[@id='use_delivery_as_billing_label']/.." position="attributes">&ndash;&gt;-->
+<!--&lt;!&ndash;            <attribute name="t-if">False</attribute>&ndash;&gt;-->
+<!--&lt;!&ndash;        </xpath>&ndash;&gt;-->
+<!--         <xpath expr="//div[@id='billing_address_list']" position="attributes">-->
+<!--            <attribute name="t-if">False</attribute>-->
+<!--        </xpath>-->
+<!--    </template>-->
 
+    <!-- Hide use_delivery_as_billing checkbox in my addresses page -->
+    <template id="my_addresses_invoice_to_company" inherit_id="portal.my_addresses">
+        <xpath expr="//div[@class='d-flex justify-content-between align-items-start gap-3 mt-4 pt-2']" position="attributes">
+            <attribute name="t-if">False</attribute>
+        </xpath>
+        <xpath expr="//label[@id='use_delivery_as_billing_label']/.." position="attributes">
+            <attribute name="t-if">False</attribute>
+        </xpath>
+        <xpath expr="//div[@class='col-xl-6']/.." position="attributes">
+            <attribute name="t-if">False</attribute>
+        </xpath>
+    </template>
+
+</odoo>

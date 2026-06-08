@@ -228,3 +228,20 @@ class TestPortalInvoiceToCompany(WebsiteSaleCommon):
         billing_address = self.portal_user.partner_id.child_ids.sorted('id', reverse=True)[0]
         self.assertEqual(billing_address.vat, 'BE0926372368')
 
+    def test_company_checkbox_creates_billing_contact_as_individual(self):
+        sale_order = self._create_so(partner_id=self.website.user_id.partner_id.id)
+
+        res = self._submit_address_as_user(
+            self.public_user,
+            sale_order,
+            partner_id=-1,
+            **self.default_billing_address_values,
+            invoice_to_company='1',
+            company_name='The Sewing Cat SL',
+            vat='BE0926372368',
+        )
+
+        self.assertEqual(res, {'redirectUrl': '/shop/checkout?try_skip_step=true'})
+        sale_order.invalidate_recordset()
+        self.assertFalse(sale_order.partner_invoice_id.is_company)
+

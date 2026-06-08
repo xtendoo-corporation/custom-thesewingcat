@@ -63,6 +63,17 @@ class WebsiteSale(WebsiteSaleController):
             **form_data,
         )
 
+    def _complete_address_values(
+        self, address_values, address_type, use_delivery_as_billing, **kwargs
+    ):
+        super()._complete_address_values(
+            address_values,
+            address_type,
+            use_delivery_as_billing,
+            **kwargs,
+        )
+        if self._is_invoice_to_company_enabled(kwargs.get('invoice_to_company')):
+            address_values['is_company'] = False
 
     def _validate_address_values(
         self,
@@ -75,9 +86,6 @@ class WebsiteSale(WebsiteSaleController):
     ):
         invoice_to_company = self._is_invoice_to_company_enabled(kwargs.get('invoice_to_company'))
         invoice_company_fields = {'company_name', 'vat'}
-        if not invoice_to_company:
-            for field_name in invoice_company_fields:
-                address_values.pop(field_name, None)
 
         invalid_fields, missing_fields, error_messages = super()._validate_address_values(
             address_values,
