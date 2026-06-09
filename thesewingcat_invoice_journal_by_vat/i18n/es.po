@@ -1,0 +1,70 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following module:
+# 	* thesewingcat_invoice_journal_by_vat
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-09 00:00+0000\n"
+"PO-Revision-Date: 2026-06-09 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: thesewingcat_invoice_journal_by_vat
+#: model:ir.module.module,shortdesc:thesewingcat_invoice_journal_by_vat.module_thesewingcat_invoice_journal_by_vat
+msgid "Invoice Journal by VAT"
+msgstr "Diario de factura por NIF/IVA"
+
+#. module: thesewingcat_invoice_journal_by_vat
+#: model:ir.model.fields,field_description:thesewingcat_invoice_journal_by_vat.field_res_company__website_sale_invoice_journal_id
+#: model:ir.model.fields,field_description:thesewingcat_invoice_journal_by_vat.field_res_config_settings__website_sale_invoice_journal_id
+msgid "Website Sale Invoice Journal"
+msgstr "Diario de factura para venta web"
+
+#. module: thesewingcat_invoice_journal_by_vat
+#: model:ir.model.fields,field_description:thesewingcat_invoice_journal_by_vat.field_res_company__website_sale_invoice_journal_nif_id
+#: model:ir.model.fields,field_description:thesewingcat_invoice_journal_by_vat.field_res_config_settings__website_sale_invoice_journal_nif_id
+msgid "Website Sale Invoice Journal with NIF"
+msgstr "Diario de factura para venta web con NIF"
+
+#. module: thesewingcat_invoice_journal_by_vat
+#: model:ir.model.fields,help:thesewingcat_invoice_journal_by_vat.field_res_company__website_sale_invoice_journal_id
+msgid "Journal used for e-commerce invoices when the customer has no VAT/NIF."
+msgstr "Diario usado para las facturas de comercio electrónico cuando el cliente no tiene IVA/NIF."
+
+#. module: thesewingcat_invoice_journal_by_vat
+#: model:ir.model.fields,help:thesewingcat_invoice_journal_by_vat.field_res_company__website_sale_invoice_journal_nif_id
+msgid "Journal used for e-commerce invoices when the customer has a VAT/NIF."
+msgstr "Diario usado para las facturas de comercio electrónico cuando el cliente tiene IVA/NIF."
+
+#. module: thesewingcat_invoice_journal_by_vat
+#: model_terms:ir.ui.view,arch_db:thesewingcat_invoice_journal_by_vat.res_config_settings_view_form_invoice_journal_by_vat
+msgid "Website Sale Invoice Journals"
+msgstr "Diarios de factura para venta web"
+
+#. module: thesewingcat_invoice_journal_by_vat
+#: model_terms:ir.ui.view,arch_db:thesewingcat_invoice_journal_by_vat.res_config_settings_view_form_invoice_journal_by_vat
+msgid "Journal without NIF"
+msgstr "Diario sin NIF"
+
+#. module: thesewingcat_invoice_journal_by_vat
+#: model_terms:ir.ui.view,arch_db:thesewingcat_invoice_journal_by_vat.res_config_settings_view_form_invoice_journal_by_vat
+msgid "Journal used when the customer does not have a VAT/NIF."
+msgstr "Diario usado cuando el cliente no tiene IVA/NIF."
+
+#. module: thesewingcat_invoice_journal_by_vat
+#: model_terms:ir.ui.view,arch_db:thesewingcat_invoice_journal_by_vat.res_config_settings_view_form_invoice_journal_by_vat
+msgid "Journal with NIF"
+msgstr "Diario con NIF"
+
+#. module: thesewingcat_invoice_journal_by_vat
+#: model_terms:ir.ui.view,arch_db:thesewingcat_invoice_journal_by_vat.res_config_settings_view_form_invoice_journal_by_vat
+msgid "Journal used when the customer has a VAT/NIF."
+msgstr "Diario usado cuando el cliente tiene IVA/NIF."
+
