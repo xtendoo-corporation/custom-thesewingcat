@@ -53,8 +53,13 @@
         <xpath expr="//label[@id='use_delivery_as_billing_label']/.." position="attributes">
             <attribute name="t-if">False</attribute>
         </xpath>
-<!--
--->
+    </template>
+
+    <!-- Hide invoice sending method and electronic format fields from contact details -->
+    <template id="portal_my_details_invoice_to_company" inherit_id="account.portal_my_details">
+        <xpath expr="//t[@t-if='len(invoice_sending_methods) > 1 and invoice_edi_format']" position="replace"/>
+        <xpath expr="//div[contains(@class, 'row m-0 p-0') and .//label[@for='invoice_sending_method']]" position="replace"/>
+        <xpath expr="//t[@t-if='invoice_edi_formats']" position="replace"/>
     </template>
 
 </odoo>

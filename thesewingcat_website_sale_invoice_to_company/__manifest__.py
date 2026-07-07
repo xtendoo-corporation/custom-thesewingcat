@@ -6,6 +6,7 @@
     "author": "The Sewing Cat",
     "license": "AGPL-3",
     "depends": [
+        "account",
         "l10n_es",
         "portal",
         "website_sale",
